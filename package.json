@@ -2,7 +2,8 @@
     "scripts": {
         "db": "ts-node src/schema/command.ts",
         "dev": "ts-node-dev --respawn --transpile-only src/serve.ts",
-        "start": "ts-node src/serve.ts"
+        "start": "ts-node src/serve.ts",
+        "test": "k6 run --vus 400 --iterations 1000 load-test.js"
     },
     "dependencies": {
         "@hono/node-server": "^0.2.4",
